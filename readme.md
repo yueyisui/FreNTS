@@ -22,46 +22,51 @@ cd FreNTS
 
 # Install required packages
 pip install -r requirements.txt
+```
 
-🚀 Usage
+## 🚀 Usage
+
 We provide scripts for both single-image texture synthesis and batch processing.
 
-Single Image Synthesis
-To synthesize a texture from a single reference image, use main.py. The most important arguments are --image_path (source image) and --output_folder (where results are saved).
+### Single Image Synthesis
+To synthesize a texture from a single reference image, use `main.py`. The most important arguments are `--image_path` (source image) and `--output_folder` (where results are saved).
 
-Bash
+```bash
 python main.py \
     --image_path data/source/test01.png \
     --output_folder ./outputs/texture_synthesis
-Advanced Configuration:
+```
+
+**Advanced Configuration:**
 You can further control the synthesis process using the following hyper-parameters (default values are optimized for standard use):
+- `--output_size`: Dimensions of the synthesized texture (default: `512 512`).
+- `--base_iters` / `--finetune_iters`: Number of iterations for the base synthesis and fine-tuning stages (default: `100` each).
+- `--use_DCT`: Flag to activate the Discrete Cosine Transform (DCT) for frequency domain processing.
+- `--lr`: Learning rate (default: `0.01`).
+- `--lambda_occ`: Weight for the occurrence penalty (default: `0.05`).
 
---output_size: Dimensions of the synthesized texture (default: 512 512).
+### Batch Processing
+To process multiple images automatically within a specific directory, use `main_auto.py`. You only need to specify the input directory and the output folder:
 
---base_iters / --finetune_iters: Number of iterations for the base synthesis and fine-tuning stages (default: 100 each).
-
---use_DCT: Flag to activate the Discrete Cosine Transform (DCT) for frequency domain processing.
-
---lr: Learning rate (default: 0.01).
-
---lambda_occ: Weight for the occurrence penalty (default: 0.05).
-
-Batch Processing
-To process multiple images automatically within a specific directory, use main_auto.py. You only need to specify the input directory and the output folder:
-
-Bash
+```bash
 python main_auto.py \
     --input_dir data/images_compared_1 \
     --output_folder ./outputs/texture_synthesis
-🎓 Citation
+```
+
+## 🎓 Citation
+
 If you find our code or paper useful for your research, please consider citing our work:
 
-代码段
+```bibtex
 @article{yue2026frents,
   title={FreNTS: Neural Texture Synthesis in Frequency Domain},
   author={Yue, Dongdong and Liu, Xinyi and Zhang, Yongjun and Zhang, Jinming and others},
   journal={IEEE Transactions on Visualization and Computer Graphics},
   year={2026}
 }
-🙏 Acknowledgments
-This code is built upon the excellent work of Guided-Correspondence-Loss. We express our gratitude to the authors for their open-source contributions.
+```
+
+## 🙏 Acknowledgments
+
+This code is built upon the excellent work of **Neural Texture Synthesis With Guided Correspondence**. We express our gratitude to the authors for their open-source contributions.
