@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This repository contains the official PyTorch implementation of the paper **"FreNTS: Neural Texture Synthesis in Frequency Domain"** (IEEE TVCG).
-
+[Click here to read the paper](https://ieeexplore.ieee.org/abstract/document/11389912)
 ## 📝 Update
 - **[Feb 2026]** Our paper has been accepted by *IEEE Transactions on Visualization and Computer Graphics (TVCG)*. Code is now released!
 
