@@ -15,7 +15,7 @@ Our method introduces a novel dual-domain framework that deeply integrates frequ
   <img src="images/pipeline.jpg" alt="The Pipeline of FreNTS" width="100%">
 </p>
 <p align="center">
-  <em>Figure 1: The overall architecture and pipeline of FreNTS.</em>
+  <em>The overall architecture and pipeline of FreNTS.</em>
 </p>
 
 ## 📊 Qualitative Results
