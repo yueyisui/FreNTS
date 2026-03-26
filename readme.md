@@ -1,17 +1,44 @@
-<h1 align="center">FreNTS: Neural Texture Synthesis in Frequency Domain</h1>
+# FreNTS: Neural Texture Synthesis in Frequency Domain
 
-<p align="center">
-  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
-  </p>
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This repository contains the official PyTorch implementation of the paper **"FreNTS: Neural Texture Synthesis in Frequency Domain"** (IEEE TVCG). 
+This repository contains the official PyTorch implementation of the paper **"FreNTS: Neural Texture Synthesis in Frequency Domain"** (IEEE TVCG).
 
 ## 📝 Update
 - **[Feb 2026]** Our paper has been accepted by *IEEE Transactions on Visualization and Computer Graphics (TVCG)*. Code is now released!
 
+## 🧠 Overview
+
+Our method introduces a novel dual-domain framework that deeply integrates frequency domain information into the neural texture synthesis process. By utilizing the Discrete Cosine Transform (DCT), FreNTS ensures both global structural alignment in the frequency domain and local detail refinement in the spatial domain.
+
+<p align="center">
+  <img src="images/pipeline.jpg" alt="The Pipeline of FreNTS" width="100%">
+</p>
+<p align="center">
+  <em>Figure 1: The overall architecture and pipeline of FreNTS.</em>
+</p>
+
+## 📊 Qualitative Results
+
+FreNTS significantly outperforms existing methods in maintaining structural continuity and visual realism, particularly when synthesizing large-scale textures.
+
+### 1. Structurally Regular Textures
+Our method effectively preserves the dense connections and regular patterns without introducing structural fractures or visual artifacts.
+
+<p align="center">
+  <img src="images/results1.jpg" alt="Comparison on structurally regular textures" width="100%">
+</p>
+
+### 2. Structurally Irregular Textures
+FreNTS also maintains highly competitive performance on irregular textures, producing visually rich and realistic variations.
+
+<p align="center">
+  <img src="images/results2.jpg" alt="Comparison on structurally irregular textures" width="100%">
+</p>
+
 ## ⚙️ Dependencies and Installation
 
-The code has been tested with Python 3 and PyTorch.
+The code has been tested with Python 3 and PyTorch. Built-in modules like `os`, `sys`, and `argparse` are used, alongside several external packages. 
 
 To set up the environment, we recommend using a virtual environment (e.g., Conda) and installing the dependencies via the provided `requirements.txt`:
 
