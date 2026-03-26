@@ -17,7 +17,7 @@ To set up the environment, we recommend using a virtual environment (e.g., Conda
 
 ```bash
 # Clone the repository
-git clone [https://github.com/yueyisui/FreNTS.git](https://github.com/yueyisui/FreNTS.git)
+git clone git@github.com:yueyisui/FreNTS.git
 cd FreNTS
 
 # Install required packages
